@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0eafv1ukxl7m"]
+
+[ext_resource type="Script" path="res://Enemies/enemy_person.gd" id="1_hpbh1"]
+[ext_resource type="Texture2D" uid="uid://fs6dkrlwe2tb" path="res://art/Characters/towerDefense_tile245.png" id="2_hsb5h"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_amrmd"]
+height = 28.0
+
+[node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_hpbh1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_amrmd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_hsb5h")

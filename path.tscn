@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://dkd837jsvw1se"]
+[gd_scene load_steps=4 format=3 uid="uid://dfht2rwilgdj6"]
 
 [ext_resource type="Script" path="res://SoldierFollower2D.gd" id="1_63d28"]
 [ext_resource type="PackedScene" uid="uid://d0eafv1ukxl7m" path="res://enemy_person.tscn" id="1_113ai"]
