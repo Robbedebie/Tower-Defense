@@ -1,10 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dbek41afjfkv0"]
+[gd_scene load_steps=5 format=3 uid="uid://dbek41afjfkv0"]
 
 [ext_resource type="Script" path="res://Towers/RedBulletTower.gd" id="1_8kk1q"]
 [ext_resource type="Texture2D" uid="uid://d3jod6yg6lhjk" path="res://art/Towers/towerDefense_tile250.png" id="2_8lowm"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6mxet"]
-size = Vector2(101, 88)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kkvmu"]
 radius = 400.0
@@ -18,10 +15,6 @@ corner_radius_bottom_left = 450
 
 [node name="RedBulletTower" type="StaticBody2D"]
 script = ExtResource("1_8kk1q")
-
-[node name="TowerHitbox" type="CollisionShape2D" parent="."]
-position = Vector2(-6.5, 0)
-shape = SubResource("RectangleShape2D_6mxet")
 
 [node name="Aim" type="Marker2D" parent="."]
 position = Vector2(60, 0)
@@ -44,10 +37,10 @@ autostart = true
 
 [node name="Area" type="Panel" parent="."]
 modulate = Color(1, 1, 1, 0.239216)
-offset_left = -400.0
-offset_top = -400.0
-offset_right = 400.0
-offset_bottom = 400.0
+offset_left = -421.0
+offset_top = -386.0
+offset_right = 379.0
+offset_bottom = 414.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_hiqhn")
 
 [connection signal="body_entered" from="Tower" to="." method="_on_tower_body_entered"]
