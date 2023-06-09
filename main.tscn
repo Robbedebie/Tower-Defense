@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dtu32xg8x063f"]
+[gd_scene load_steps=6 format=3 uid="uid://dtu32xg8x063f"]
 
 [ext_resource type="PackedScene" uid="uid://cd06tjp6armko" path="res://Levels/level1.tscn" id="1_5ihr7"]
 [ext_resource type="Script" path="res://PathSpawner.gd" id="1_f3o5m"]
 [ext_resource type="Script" path="res://main.gd" id="1_vtgy7"]
 [ext_resource type="PackedScene" uid="uid://dbek41afjfkv0" path="res://Towers/red_bullet_tower.tscn" id="3_cpgwr"]
+[ext_resource type="PackedScene" uid="uid://c4hb5n0a3mhl8" path="res://scoreLabel.tscn" id="5_12ine"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_vtgy7")
@@ -26,5 +27,7 @@ autostart = true
 [node name="RedBulletTower" parent="." instance=ExtResource("3_cpgwr")]
 position = Vector2(-443, -365)
 bulletDamage = 5
+
+[node name="ScoreBoard" parent="." instance=ExtResource("5_12ine")]
 
 [connection signal="timeout" from="PathSpawner/Timer" to="PathSpawner" method="_on_timer_timeout"]
