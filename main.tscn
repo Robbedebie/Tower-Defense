@@ -2,12 +2,15 @@
 
 [ext_resource type="PackedScene" uid="uid://cd06tjp6armko" path="res://Levels/level1.tscn" id="1_5ihr7"]
 [ext_resource type="Script" path="res://PathSpawner.gd" id="1_f3o5m"]
+[ext_resource type="PackedScene" uid="uid://bcf8nrpc4vlge" path="res://ui.tscn" id="1_q0oa5"]
 [ext_resource type="Script" path="res://main.gd" id="1_vtgy7"]
 [ext_resource type="PackedScene" uid="uid://dbek41afjfkv0" path="res://Towers/red_bullet_tower.tscn" id="3_cpgwr"]
 [ext_resource type="PackedScene" uid="uid://c4hb5n0a3mhl8" path="res://scoreLabel.tscn" id="5_12ine"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_vtgy7")
+
+[node name="UI" parent="." instance=ExtResource("1_q0oa5")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
@@ -23,10 +26,10 @@ script = ExtResource("1_f3o5m")
 autostart = true
 
 [node name="Towers" type="Node2D" parent="."]
+position = Vector2(0, 13)
 
 [node name="RedBulletTower" parent="." instance=ExtResource("3_cpgwr")]
 position = Vector2(-443, -365)
-bulletDamage = 5
 
 [node name="ScoreBoard" parent="." instance=ExtResource("5_12ine")]
 
