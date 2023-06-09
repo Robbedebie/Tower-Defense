@@ -1,7 +1,7 @@
 extends Node2D
 
-@export var number_of_enemies = 9
-@export var wave_finished = true
+var number_of_enemies = 9
+var wave_finished = true
 var counter = 0
 
 @onready var path = preload("res://Levels/level1_path.tscn")
@@ -20,3 +20,6 @@ func get_wave_finished():
 func start_wave():
 	wave_finished = false
 	counter = 0
+	number_of_enemies += GlobalSingleton.get_wave() * 2
+	$Timer.wait_time = 1 - GlobalSingleton.get_wave() * 0.05
+	
