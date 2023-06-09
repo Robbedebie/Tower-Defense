@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4hb5n0a3mhl8"]
+
+[ext_resource type="Script" path="res://scoreLabel.gd" id="1_laasa"]
+[ext_resource type="FontFile" uid="uid://bxeltypwj0ncy" path="res://art/Bungee-Regular.ttf" id="1_vjrcv"]
+
+[node name="ScoreBoard" type="Node"]
+script = ExtResource("1_laasa")
+
+[node name="ScoreLabel" type="Label" parent="."]
+custom_minimum_size = Vector2(40, 40)
+offset_left = 80.0
+offset_top = -500.0
+offset_right = 120.0
+offset_bottom = -456.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_vjrcv")
+theme_override_font_sizes/font_size = 40
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1

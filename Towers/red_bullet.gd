@@ -7,7 +7,6 @@ var bulletDamage
 
 func _physics_process(delta):
 	var pathSpawnerNode = get_tree().get_root().get_node("Main/PathSpawner")
-	
 	for i in pathSpawnerNode.get_child_count():
 		if pathSpawnerNode.get_child(i).name == pathName:
 			#Dit is de global position van de Enemy, pathSpawnerNode.getChild is een path
