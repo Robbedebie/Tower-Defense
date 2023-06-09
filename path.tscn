@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://b5db2vqrteir2"]
+[gd_scene load_steps=5 format=3 uid="uid://b5db2vqrteir2"]
 
 [ext_resource type="Script" path="res://SoldierFollower2D.gd" id="1_63d28"]
 [ext_resource type="PackedScene" uid="uid://d0eafv1ukxl7m" path="res://Enemies/soldier.tscn" id="1_113ai"]
+[ext_resource type="Script" path="res://Path2D.gd" id="1_ft7dk"]
 
 [sub_resource type="Curve2D" id="Curve2D_2nvdk"]
 _data = {
@@ -13,6 +14,7 @@ point_count = 8
 
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource("Curve2D_2nvdk")
+script = ExtResource("1_ft7dk")
 
 [node name="SoldierFollower2D" type="PathFollow2D" parent="Path2D"]
 position = Vector2(208.385, 268.143)

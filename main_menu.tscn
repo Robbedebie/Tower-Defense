@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://el7svv3ks2wm"]
+[gd_scene load_steps=6 format=3 uid="uid://cdu03rnxtrree"]
 
 [ext_resource type="Script" path="res://main_menu.gd" id="1_ipp68"]
 [ext_resource type="FontFile" uid="uid://bxeltypwj0ncy" path="res://art/Bungee-Regular.ttf" id="1_nmt3v"]
