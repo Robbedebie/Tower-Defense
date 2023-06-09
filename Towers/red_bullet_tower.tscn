@@ -10,6 +10,7 @@ size = Vector2(101, 88)
 radius = 400.0
 
 [node name="RedBulletTower" type="StaticBody2D"]
+scale = Vector2(6, 6)
 script = ExtResource("1_8kk1q")
 
 [node name="TowerHitbox" type="CollisionShape2D" parent="."]
