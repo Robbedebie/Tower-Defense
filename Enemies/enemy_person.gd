@@ -1,10 +1,9 @@
 extends CharacterBody2D
 
-@export var speed = 100
-@export var health = 10
-@export var enemies_killed = 0
+var speed = 100
+var health = 10
 func _process(delta):
-	get_parent().set_progress(get_parent().get_progress() + speed * delta)
+	get_parent().set_progress(get_parent().get_progress() + (speed + (GlobalSingleton.get_wave() * 10)) * delta)
 	if get_parent().get_progress_ratio() == 1:
 		queue_free()
 	
