@@ -1,10 +1,16 @@
 extends StaticBody2D
 
 var Bullet = preload("res://Towers/red_bullet.tscn")
-var bulletDamage = 5
+@export var bulletDamage = 5
 var pathName
 var currentTargets = []
 var currentFurthestTarget
+
+func _process(delta):
+	if is_instance_valid(currentFurthestTarget):
+		self.look_at(currentFurthestTarget.global_position)
+	else:
+		remove_all_bullets_locked_on_target()
 
 func _on_tower_body_entered(body):
 	if "Enemy" in body.name:
@@ -30,8 +36,12 @@ func _on_tower_body_entered(body):
 		var tempBullet = Bullet.instantiate()
 		tempBullet.pathName = pathName
 		tempBullet.bulletDamage = bulletDamage
-		get_node("BulletContainer").add_child(tempBullet)
 		tempBullet.global_position = $Aim.global_position
+		get_node("BulletContainer").add_child(tempBullet)
 		
 func _on_tower_body_exited(body):
-	pass # Replace with function body.
+	currentTargets = get_node("Tower").get_overlapping_bodies()
+	
+func remove_all_bullets_locked_on_target():
+	for i in get_node("BulletContainer").get_child_count():
+			get_node("BulletContainer").get_child(i).queue_free()
