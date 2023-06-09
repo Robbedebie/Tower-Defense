@@ -14,7 +14,6 @@ func _on_gui_input(event):
 		get_child(1).global_position = event.global_position
 		
 	elif event is InputEventMouseButton and event.button_mask == 0:
-		print("left mouse button up")
 		# get current  global_position of dragged tower 
 		var drop_pos = get_child(1).global_position
 		drop_pos.x -= 905
