@@ -16,6 +16,14 @@ script = ExtResource("1_vtgy7")
 [node name="TileMap" parent="." instance=ExtResource("1_5ihr7")]
 position = Vector2(-937, -522)
 scale = Vector2(0.834552, 0.803742)
+layer_0/name = "GroundLayer"
+layer_1/name = "TopLayer"
+layer_1/enabled = true
+layer_1/modulate = Color(1, 1, 1, 1)
+layer_1/y_sort_enabled = false
+layer_1/y_sort_origin = 0
+layer_1/z_index = 0
+layer_1/tile_data = PackedInt32Array(458763, 2490368, 10, 458767, 2555904, 10, 720911, 2555904, 11, 720907, 2490368, 11, 393247, 1966080, 10, 393251, 2031616, 10, 655395, 2031616, 11, 655391, 1966080, 11)
 
 [node name="PathSpawner" type="Node2D" parent="."]
 position = Vector2(-830, -494)

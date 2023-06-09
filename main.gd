@@ -14,5 +14,3 @@ func _process(delta):
 
 func enemy_killed():
 	GlobalSingleton.add_score(1)
-
-	
