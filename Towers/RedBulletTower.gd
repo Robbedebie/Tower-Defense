@@ -10,13 +10,9 @@ func _process(delta):
 	if is_instance_valid(currentFurthestTarget):
 		self.look_at(currentFurthestTarget.global_position)
 	else:
-		remove_all_bullets_locked_on_target()
-	
-func remove_all_bullets_locked_on_target():
-	for i in get_node("BulletContainer").get_child_count():
+		for i in get_node("BulletContainer").get_child_count():
 			get_node("BulletContainer").get_child(i).queue_free()
-
-
+	
 func _on_timer_timeout():
 	var bodies_in_range = get_node("Tower").get_overlapping_bodies()
 	var enemies_in_range = []
