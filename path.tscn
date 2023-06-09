@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dfht2rwilgdj6"]
+[gd_scene load_steps=4 format=3 uid="uid://b5db2vqrteir2"]
 
 [ext_resource type="Script" path="res://SoldierFollower2D.gd" id="1_63d28"]
-[ext_resource type="PackedScene" uid="uid://d0eafv1ukxl7m" path="res://enemy_person.tscn" id="1_113ai"]
+[ext_resource type="PackedScene" uid="uid://d0eafv1ukxl7m" path="res://Enemies/soldier.tscn" id="1_113ai"]
 
 [sub_resource type="Curve2D" id="Curve2D_2nvdk"]
 _data = {
